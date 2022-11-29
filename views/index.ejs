@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/bootstrap-rtl.css">
+     <link rel="stylesheet" href="css/font-awesome.css">
+     <title><%= pageTitle %> </title>
+</head>
+<body class="rtl">
+     <div class="form-group">
+          <h1>کارهای <small>روزمره</small></h1>
+          <form
+              action="/admin/add-todo"
+              role="form"
+              class="row w-50 justify-content-center mx-auto"
+              method="POST"
+          >
+              <div class="input-group">
+                  <input
+                      type="text"
+                      name="todo"
+                      class="form-control w-50"
+                      placeholder="کار امروز"
+                  />
+                  <div class="input-group-prepend">
+                      <button type="submit" class="btn btn-primary fa fa-plus"/>
+                  </div>
+              </div>
+          </form>
+          <div class="mx-auto w-50 mb-3 alert alert-primary row">
+              <p class="d-inline col">کارهای انجام شده : <span class="badge badge-success badge-pill">0<!-- CompletedTodos --></span></p>
+              <p class="d-inline col">کارهای باقی مانده امروز : <span class="badge badge-warning badge-pill">0<!-- RemainingTodos --></span></p>
+          </div>
+      </div>
+</body>
+</html>
